@@ -1,0 +1,6 @@
+[server]
+# Community Cloud does not need hot-reload. Disabling the watcher prevents
+# Streamlit from introspecting Transformers' optional vision modules, which
+# otherwise produces noisy torchvision import tracebacks in the deployment log.
+fileWatcherType = "none"
+runOnSave = false
