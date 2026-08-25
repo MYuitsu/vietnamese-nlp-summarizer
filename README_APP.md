@@ -17,9 +17,12 @@ Web application xử lý một văn bản tiếng Việt để trích xuất t�
 ## Cài đặt và chạy
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\streamlit.exe run streamlit_app.py
 ```
+
+`requirements.txt` chỉ chứa các thư viện được dùng trực tiếp bởi bản demo Streamlit; không cài
+thêm `torchvision`, OCR, DOCX, Plotly, FastAPI hoặc Playwright trên Community Cloud.
 
 Mở `http://localhost:8501`, sau đó dán Haimaker API key vào ô mật khẩu ở thanh bên trái. Key chỉ được giữ trong bộ nhớ của phiên Streamlit hiện tại và không được ghi xuống tệp hoặc kết quả tải xuống.
 
